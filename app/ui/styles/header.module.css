@@ -1,0 +1,206 @@
+.header {
+    position: relative;
+    padding: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerLogo {
+    padding: 31px 40px;
+}
+
+.logo {
+    width: 100px;
+    transition: 0.8s;
+}
+.logo:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.containerButton {
+    padding: 0px 20px;
+}
+
+.buttom {
+    background: var(--bg-second);
+    width: 95px;
+    height: 120px;
+    border-radius: 0 0 60px 60px;
+    border: none;
+    cursor: pointer;
+}
+.buttom:hover{
+    background-color: var(--bg-third);
+}
+
+.icon {
+    margin-top: 30px;
+    transition: 0.8s;
+}
+.icon:hover{
+    transform: scale(1.2);
+}
+
+.iconImg {
+    width: 45px;
+}
+
+
+.containerSidebar {
+    background: transparent;
+    color: var(--color-second);
+    position: fixed;
+    justify-items: end;
+    width: 100vw;
+    transition: background 0.3s ease-in-out;
+    pointer-events: none; }
+
+.containerSidebar.active {
+    
+    background-color: rgba(0, 0, 0, 0.807);
+    pointer-events: all;
+}
+
+.sidebar {
+    overflow-x: hidden;
+    background: var(--bg-second);
+    justify-content: center;
+    border-radius: 60px 0 0 160px;
+    max-width: 400px;
+    width: 300px;
+    height: 650px;
+    padding: 0 0;
+
+    transform: translateX(101%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.containerSidebar.active .sidebar{
+   transform: translateX(0);
+}
+
+.containerClosedButtom {
+    display: flex;
+    justify-content: end;
+    max-width: 300px;
+    width: 100vw;
+    padding: 0 20px;
+}
+
+.closedButtom {
+    background: var(--bg-primary);
+    width: 95px;
+    height: 120px;
+    border-radius: 0 0 60px 60px;
+    border: none;
+    cursor: pointer;
+
+    transition: 0.8s;
+}
+
+.closedButtom:hover{
+    background-color: var(--bg-third);
+    transform: scale(1.1);
+}
+
+
+.list {
+    padding: 30px;
+    margin-top: 20px;
+    font-family: var(--font-archivo_black);
+    list-style: none;
+
+}
+
+.li {
+    font-size: x-large;
+    margin-bottom: 20px;
+    width: 200px;
+    
+}
+
+.listItemLast {
+    width: 240px;
+}
+
+.link{
+    color: var(--color-second);
+    text-decoration: none;
+    transition: 0.8s;
+}
+.link:hover{
+    color: var(--color-primary);
+    transform: scale(1.1);
+}
+
+.line {
+    border: none;
+    height: 1px;
+    background-color: rgb(78, 78, 78);
+    margin: 1px 0px;
+    margin: 10px 0;
+
+}
+
+.lineLast {
+    display: none;
+}
+
+
+
+/*TABLET*/
+@media (min-width: 768) {
+    .logo {
+        width: 115px;
+    }
+
+    .buttom {
+        width: 90px;
+        height: 130px;
+    }
+
+    .iconImg {
+        width: 40px;
+    }
+
+    .line {
+        margin: 20px 0;
+    }
+
+}
+
+/*LAPTOP*/
+@media (min-width: 1024) {
+    .logo {
+        width: 155px;
+    }
+
+    .buttom {
+        width: 112px;
+        height: 160px;
+    }
+
+    .iconImg {
+        width: 60px;
+    }
+    .sidebar {
+        width: 400px;
+        height: 900px;
+    }
+
+    .containerClosedButtom {
+        max-width: 400px;
+    }
+
+    .list {
+        margin-top: 40px;
+    }
+
+    .li {
+        margin-bottom: 40px;
+        font-size: 30px;
+        width: 300px;
+    }
+}
